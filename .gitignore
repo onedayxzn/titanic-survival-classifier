@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Model artifacts
+models/
+
+# Gradio
+.gradio/
+flagged/
+
+# OS & Editor
+.DS_Store
+.vscode/
+.idea/
