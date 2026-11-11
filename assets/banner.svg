@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220" role="img" aria-label="Titanic Survival Classifier Animated Banner">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="55%" stop-color="#1c2541"/>
+      <stop offset="100%" stop-color="#0f2942"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#0b132b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0b132b" stop-opacity="0.95"/>
+    </linearGradient>
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="900" height="220" rx="16" ry="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect width="900" height="220" fill="url(#bgGrad)"/>
+
+    <!-- Subtle background grid -->
+    <g stroke="#334155" stroke-width="0.6" opacity="0.35">
+      <line x1="0" y1="55" x2="900" y2="55"/>
+      <line x1="0" y1="110" x2="900" y2="110"/>
+      <line x1="0" y1="165" x2="900" y2="165"/>
+      <line x1="150" y1="0" x2="150" y2="220"/>
+      <line x1="300" y1="0" x2="300" y2="220"/>
+      <line x1="450" y1="0" x2="450" y2="220"/>
+      <line x1="600" y1="0" x2="600" y2="220"/>
+      <line x1="750" y1="0" x2="750" y2="220"/>
+    </g>
+
+    <!-- Animated twinkling stars -->
+    <circle cx="95" cy="40" r="1.6" fill="#e2e8f0">
+      <animate attributeName="opacity" values="0.2;0.95;0.2" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="28" r="1.2" fill="#93c5fd">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="670" cy="36" r="1.5" fill="#e2e8f0">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="810" cy="52" r="1.8" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.9;0.25;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Animated ship silhouette on right -->
+    <g transform="translate(685, 88)">
+      <animateTransform attributeName="transform" type="translate" values="685,88; 685,83; 685,88" dur="3.6s" repeatCount="indefinite"/>
+      <!-- Smoke puffs -->
+      <circle cx="52" cy="4" r="5" fill="#94a3b8" opacity="0.45">
+        <animate attributeName="cx" values="52;68;84" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="4;-6;-14" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.2;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="84" cy="4" r="4.5" fill="#94a3b8" opacity="0.4">
+        <animate attributeName="cx" values="84;100;116" dur="2.8s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="4;-5;-13" dur="2.8s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.45;0.15;0" dur="2.8s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Funnels -->
+      <rect x="46" y="10" width="10" height="22" rx="1.5" fill="#f59e0b"/>
+      <rect x="46" y="10" width="10" height="5" rx="1" fill="#1e293b"/>
+      <rect x="78" y="10" width="10" height="22" rx="1.5" fill="#f59e0b"/>
+      <rect x="78" y="10" width="10" height="5" rx="1" fill="#1e293b"/>
+      <!-- Deck -->
+      <rect x="28" y="30" width="84" height="12" rx="3" fill="#e2e8f0"/>
+      <!-- Hull -->
+      <polygon points="10,42 134,42 122,60 22,60" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4"/>
+      <!-- Portholes -->
+      <circle cx="42" cy="50" r="2" fill="#fde047"/>
+      <circle cx="62" cy="50" r="2" fill="#fde047"/>
+      <circle cx="82" cy="50" r="2" fill="#fde047"/>
+      <circle cx="102" cy="50" r="2" fill="#fde047"/>
+    </g>
+
+    <!-- Animated waves -->
+    <path fill="url(#wave1)">
+      <animate attributeName="d" dur="5s" repeatCount="indefinite" values="
+        M0,158 Q150,140 300,158 T600,158 T900,158 L900,220 L0,220 Z;
+        M0,158 Q150,174 300,158 T600,158 T900,158 L900,220 L0,220 Z;
+        M0,158 Q150,140 300,158 T600,158 T900,158 L900,220 L0,220 Z"/>
+    </path>
+    <path fill="url(#wave2)">
+      <animate attributeName="d" dur="4s" repeatCount="indefinite" values="
+        M0,172 Q120,186 240,172 T480,172 T720,172 T900,172 L900,220 L0,220 Z;
+        M0,172 Q120,158 240,172 T480,172 T720,172 T900,172 L900,220 L0,220 Z;
+        M0,172 Q120,186 240,172 T480,172 T720,172 T900,172 L900,220 L0,220 Z"/>
+    </path>
+
+    <!-- Badge -->
+    <g transform="translate(48, 38)">
+      <rect x="0" y="0" width="215" height="26" rx="13" fill="#0ea5e9" fill-opacity="0.16" stroke="#38bdf8" stroke-opacity="0.5"/>
+      <circle cx="16" cy="13" r="4" fill="#34d399">
+        <animate attributeName="r" values="3.5;5;3.5" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="28" y="17" fill="#bae6fd" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.6">MACHINE LEARNING • GRADIO</text>
+    </g>
+
+    <!-- Title & Subtitle -->
+    <text x="48" y="106" fill="url(#titleGrad)" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="800">
+      Titanic Survival Classifier
+    </text>
+    <text x="48" y="136" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="15">
+      Prediksi Keselamatan Penumpang dengan Decision Tree &amp; Binary Logistic Regression
+    </text>
+
+    <!-- Animated accent line -->
+    <rect x="48" y="150" width="120" height="3" rx="1.5" fill="#38bdf8">
+      <animate attributeName="width" values="90;240;90" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
